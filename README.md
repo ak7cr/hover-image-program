@@ -16,36 +16,36 @@
 mkdir build && cd build
 cmake ..
 make
+```
 
-🐍 Python Usage
+### 🐍 Python Usage
 Build and Install
-bash
-Copy
-Edit
+```bash
 # From the project root
 cd build
 cmake .. -DPYTHON_BINDINGS=ON
 make
+```
 
 # Copy the .so/.pyd into the python/ directory or install
+```
 cd ..
 pip install .
+```
 
-☕ Java Usage
+## ☕ Java Usage
 Compile Java and Generate JNI Headers
-bash
-Copy
-Edit
+```bash
 cd java
 javac -h . com/example/MathUtils.java
+```
 Build and Run with JNI
-bash
-Copy
-Edit
+```bash
 cd ..
 mkdir build && cd build
 cmake .. -DJAVA_BINDINGS=ON
 make
+```
 
 # Run the Java program
 java -Djava.library.path=. com.example.Main
